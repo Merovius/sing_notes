@@ -9,11 +9,11 @@ cp sing_header.tex "$TEMP/sing_header.tex"
 
 cp license.pdf "$TEMP/license.pdf"
 
-( echo "\\\\newcommand{\\\\doctitle}{Funktionalanalysis (Stand: $(date +%d.%m.%Y))}"; \
+( echo "\\\\newcommand{\\\\doctitle}{Singular spaces and the Poincaré-duality (Date: $(date +%d.%m.%Y))}"; \
   sed -e "s/\\\\chead{\\\\doctitle}//g; s/\\\\makelicense$//g" sing_header.tex; \
-  echo "\\\\title{Komplette Mitschriebe zur Funktionalanalysis bei Herrn Dondl}
+  echo "\\\\title{Notes for the lecture ”singular spaces and the Poincaré-duality“ by Markus Banagl}
 \\\\author{Axel Wagner}
-\\\\date{Stand: $(date +%d.%m.%Y)}
+\\\\date{Date: $(date +%d.%m.%Y)}
 \\\\maketitle
 \\\\makelicense
 \\\\tableofcontents
