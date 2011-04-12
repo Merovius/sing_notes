@@ -1,0 +1,4 @@
+Notes for ”singular spaces and the Poincaré-duality“ by Markus Banagl
+=====================================================================
+
+http://studium.merovius.de/sing.pdf[Download the PDF] (Last update: {sys:date -r sing.pdf})
