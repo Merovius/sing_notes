@@ -1,0 +1,106 @@
+\newcommand{\doctitle}{Stratified singular spaces and poincarè-duality by Markus Banagl - 12.04.11}
+\include{sing_header}
+
+\section*{Motivation}
+
+\begin{satz}[\PD\ for manifolds]
+    Let $M^n$ be a closed, oriented manifold.
+    \[ [M] \in H_n(M) \]
+    \[ -\cap [M]\c H^i(M) \stackrel{\cong}{\to} H_{n-i}(M) \]
+    In particular
+    \[ b_i(M) \ce \rk H_i(M) = \rk H_{n-i}(M) \]
+\end{satz}
+
+Singular spaces do not posses \PD.
+
+\textbf{Example:} ”Pinched Torus“ % Image
+\[ H_0(X) \cong \Z \]
+\[ H_2(X) \cong \Z \]
+Problem: $H_1(X) = \Z$. There is no intesersection product, so \PD\ does not hold.
+
+\textbf{Example:} $X^3 = \Sigma(T^2)$, the suspension of the Torus. % Image
+\[ b_0 = 1 = b_3 \]
+\[ b_1 = 0 \]
+\[ b_2 = 2 \]
+Since $b_1 \neq b_2$, \PD\ does not hold.
+
+\section*{Stratified spaces}
+
+A \textbf{stratification} of a singular space $X$ will turn out to be a Decomposition of $X$ into a disjoint union of $S_i$, such that the $S_i$ are manifolds and points in $S_i$ are ”equaly singular“.
+
+\subsection*{Topological construction}
+
+\begin{itemize}
+    \item A Cross
+    \item The pinched torus % Image ”Topological constructions 1“
+    \item $X^3 = \Sigma T^2 = \{N,S\} \cup \underbrace{\left(X^3 \setminus \{N,S\}\right)}_{\cong (0,1) \times T^2}$
+    \item $X^2 = T^2 \cup T^2 = S_1 \cup S_2$ % Image ”Rotated figure 8“
+    \item $X^4 = S^1 \times \Sigma T^2$
+    \item $X^4 = \Sigma\Sigma T^2$ % Image ”Highly suspended torus“
+\end{itemize}
+
+\subsection*{Smooth groupactions}
+
+Let $M^n$ be a closed smooth manifold and $G$ a compact Lie group acting smoothly on $M$.
+
+\textbf{Example:} $G = S^1, M = S^2$ % Image ”Rotating orb“
+
+$\rightsquigarrow$ Orbit Space $\quot{M}{G}$
+
+The orbit space will usually be singular.
+
+We will stratify $\quot{M}{G}$. Let $H$ be a closed Subgroup $H < G$.
+\[ M_{(H)} \ce \{ x \in M \mid G_x \sim H \} \]
+Where $\sim$ is conjugate equivalence, $G_x$ is the isotropy group at $x$ and $(H)$ is the conjugate class of $H$.
+
+$M_{(H)}$ is a union of orbits:
+\[ G_{g\cdot x} = gG_xGg^{-1} \sim G_x \sim H \]
+\[ \Ra G_{g\cdot x} \sim H \]
+\begin{proposition}
+    Assume $\quot{M}{G}$ is connected. Then there exists a unique conjugate class $(H_0)$, such that $M_{(H_0)}$ is open and dense in $M$.
+\end{proposition}
+
+\textbf{Example:} In the rotating sphere example, $(H_0) = (e_0)$, because $M_{(e)} = S^2 \setminus \{N,S\}$.
+
+\begin{itemize}
+    \item $M_{(H)}$ is a smoothly embedded submanifold of $M$, called the orbit bundle of $(H)$.
+    \[\begin{diagram}
+        \node{\quot{G}{H}}
+            \arrow{e}
+        \node{M_{(H)}}
+            \arrow{s}{\pi} \\
+        \node{}
+        \node{\quot{M_{(H)}}{G}}
+    \end{diagram}\]
+    \item As $G$ is compact, there are only finitely many isotropy types.
+    \[ M = \bigcup_{i=1}^n M_{(H_i)} \]
+    \[ \quot{M}{G} = \bigcup_{i=1}^n \underbrace{\quot{M_{(H_i)}}{G}}_{=S_{(H)}} \]
+\end{document}
+
+\textbf{Example:} In the rotating sphere example, $\quot{M}{G} = \quot{M_{(e)}}{G} \cup \quot{\{ N, S\}}{G}$.
+
+\subsection*{Link}
+
+% Image ”links“
+
+Suppose $(H_0) = (e)$, there are only 2 isotropy types, $(e)$ and $(H)$, $H \neq e$, and $G$ acts transitively on $M_{(H)}$ (so there is some $x\in M_{(H)}$, such that $M_{(H)} = Gx$).
+
+% Image ”Slice“
+\textbf{Question:} What is the link of the singular point in $\quot{M}{G}$.
+\[ V_x \ce \frac{T_xM}{T_x(Gx)} \]
+$V_x$ is called a ”slice“.
+
+Let $h \in G_x \sim H$.
+\[ h_* \c T_x(Gx) \to T_{hx}(Gx) = T_x(Gx) \]
+We obtain a represantation
+\[ H \sim G_x \to \GL(V_x) \]
+called the \textbf{slice-representation}.
+
+We can therefore form
+\[ G \times_{G_x} V_x \ce \quot{G\times V_x}{G_x} \]
+which is a vector bundle over $Gx$.
+
+\begin{satz}[Slice theorem]
+    There exists an open neighbourhood $N_x$ of the orbit $Gx$ and an equivariant diffeomorphism
+    \[ N_x \cong G \times_{G_x} V_x \]
+\end{satz}

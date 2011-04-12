@@ -1,0 +1,92 @@
+\documentclass[12pt, a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{palatino,avant}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,stmaryrd,mathabx,yfonts} % mathabx
+\usepackage{pb-diagram}
+\usepackage{cancel}
+\usepackage{txfonts}
+\usepackage{graphics}
+\usepackage[pdftex,bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,colorlinks=true,filecolor=black,
+                linkcolor=red,urlcolor=blue,plainpages=false,pdfpagelabels,citecolor=black,
+                pdftitle={\doctitle},setpagesize=false,pdfauthor={Axel Wagner}]{hyperref}
+
+\newcommand{\makelicense}{Dieser Mitschrieb steht unter der freien \texttt{CC-BY-SA-DE 3.0} Lizenz.
+\begin{center}\includegraphics[height=31pt,width=88pt]{license.pdf}\end{center}
+Für weitere Informationen besuchen Sie
+\begin{center}\url{http://creativecommons.org/licenses/by-sa/3.0/deed.de}\end{center}}
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\bi}{\leftrightarrow}
+\renewcommand{\c}{\colon}
+\newcommand{\ce}{\coloneqq}
+\newcommand{\ec}{\eqqcolon}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mc}{\mathcal}
+\newcommand{\ms}{\mathscr}
+\newcommand{\K}{\mb{K}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\N}{\mb{N}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\Z}{\mb{Z}}
+\renewcommand{\H}{\mb{H}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\B}{\mathcal{B}}
+\renewcommand{\S}{\mathcal{S}}
+\renewcommand{\a}{\mathfrak{a}}
+\renewcommand{\b}{\mathfrak{b}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\supp}{\mathrm{supp}}
+\newcommand{\rk}{\mathrm{rk}}
+\newcommand{\Alt}{\mathrm{Alt}}
+\renewcommand{\deg}{\mathrm{deg}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\del}{\partial}
+\renewcommand{\d}{\,\mathrm{d}}
+\renewcommand{\D}{\mathrm{D}}
+\newcommand{\Ta}{\mathrm{T}}
+\newcommand{\offen}{\underset{\mathrm{offen}}{\subset}}
+\newcommand{\abgeschl}{\underset{\mathrm{abgeschl.}}{\subset}}
+\newcommand{\lsup}[2]{\ensuremath{{}^{#2}\smallskip{#1}}}
+\newcommand{\keime}{\mathrm{Keime}}
+\newcommand{\ind}{\mathrm{Index}}
+\newcommand{\im}{\mathrm{Im}\,}
+\newcommand{\interior}{\mathrm{\int}\,}
+\newcommand{\rot}{\mathrm{rot}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\mathhead}[1]{\texorpdfstring{$#1$}{#1}}
+\newcommand{\UVR}{\stackrel{\text{UVR}}{\subset}}
+\newcommand{\Span}{\mathrm{span}}
+\newcommand{\dist}{\mathrm{dist}}
+\renewcommand{\L}{\mathscr{L}}
+\newcommand{\PD}{Poincaré-duality}
+\newcommand{\quot}[2]{#1 / #2}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{satz}[definition]{Theorem}
+\newtheorem{korollar}[definition]{Corollary}
+\newtheorem{proposition}[definition]{Proposition}
+
+% No indention at new paragraphs
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\makelicense
